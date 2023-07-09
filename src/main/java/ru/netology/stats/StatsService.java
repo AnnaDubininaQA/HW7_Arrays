@@ -29,8 +29,8 @@ public class StatsService {
                 monthMax = i;
             }
         }
-            return monthMax + 1;
-        }
+        return monthMax + 1;
+    }
 
     public int monthMinSales(int[] sales) {   // номер месяца, в котором был минимум продаж
         int monthMin = 0;
@@ -43,7 +43,7 @@ public class StatsService {
         return monthMin + 1;
     }
 
-    public long belowAverageSales (long[] sales) { //месяцы, где продажи ниже среднего
+    public long belowAverageSales(long[] sales) { //месяцы, где продажи ниже среднего
         long monthBelowAverage = 0;
         for (long sale : sales) {
             if (sale < average(sales)) {
@@ -51,8 +51,9 @@ public class StatsService {
             }
         }
         return monthBelowAverage;
-        }
-    public long aboveAverageSales (long[] sales) { //месяцы, где продажи выше среднего
+    }
+
+    public long aboveAverageSales(long[] sales) { //месяцы, где продажи выше среднего
         long monthAboveAverage = 0;
         for (long sale : sales) {
             if (sale > average(sales)) {
